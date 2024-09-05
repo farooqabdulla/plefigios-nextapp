@@ -20,8 +20,8 @@ const Navbar = () => {
 
     return (
         <>
-            <nav className='flex justify-between z-50 sticky top-0 items-center w-[100%] bg-[#F3F7FE] h-[9vh] md:bg-[#061551] md:h-[11vh]'>             
-                <Link href='/' className='h-[100%] bg-[#F3F7FE] px-[3.5vw] flex items-center justify-center'>
+            <nav className='flex justify-between z-50 sticky top-0 items-center w-[100%] bg-[#F3F7FE] h-[9vh] md:bg-white md:h-[11vh]'>             
+                <Link href='/' className='h-[100%] bg-white px-[3.5vw] flex items-center justify-center'>
                     <h1 className='text-slate-800 text-[7vw] md:text-[1.7vw] font-bold hfont'>
                         PLEFI<span className='text-[#854CFE]'>GOS</span>
                     </h1>
@@ -32,7 +32,7 @@ const Navbar = () => {
                     </button>
                 </div>
 
-                <ul className={`flex pfont text-white z-0 text-[6vw] h-[100vh] bg-[#061551] px-[4vw] pt-[20vh] pb-[30vh] md:pt-0 md:text-[0.9vw] items-center font-semibold md:pb-0 justify-between lg:static absolute lg:flex-row flex-col top-[0vh] left-0 lg:w-[40%] w-full lg:bg-transparent transition-transform transform ${isOpen ? 'translate-x-0' : '-translate-x-full'} lg:translate-x-0`}>
+                <ul className={`flex pfont text-slate-700  z-0 text-[6vw] h-[100vh] bg-[#061551] px-[4vw] pt-[20vh] pb-[30vh] md:pt-0 md:text-[0.9vw] items-center font-semibold md:pb-0 justify-between lg:static absolute lg:flex-row flex-col top-[0vh] left-0 lg:w-[40%] w-full lg:bg-transparent transition-transform transform ${isOpen ? 'translate-x-0' : '-translate-x-full'} lg:translate-x-0`}>
                     <li onClick={closeMenu}>
                         <Link href='/' className={isActive('/') ? 'text-[#854CFE]' : ''}>HOME</Link>
                     </li>

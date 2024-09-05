@@ -11,7 +11,6 @@ import wordpress from '/assects/images/wordpress.jpg'
 import web from '/assects/images/web.webp'
 import Image from 'next/image'
 import dynamic from 'next/dynamic';
-import BoxReveal from './components/BoxReveal'
 const ScrollAnimation = dynamic(() => import('./components/ScrollAnimation'), { ssr: false });
 import IconCloud from "@/components/magicui/icon-cloud";
 
@@ -52,7 +51,7 @@ const Home = () => {
     <>
       <section className='h-[92vh] z-10 relative flex justify-center items-center'>
         <video
-          src="/assects/videos/blur2.mp4"
+          src="/assects/videos/teamvideo.mp4"
           autoPlay
           muted
           loop
@@ -63,48 +62,43 @@ const Home = () => {
           <Image src={design} className='absolute animate-spin w-[10vw] md:w-[2vw] top-0 right-[14vw]' alt="" />
           <Image src={design1} className='absolute  w-[10vw] md:w-[2vw] animate-bounce bottom-[13vh] left-0' alt="" />
           <Image src={design2} className='absolute animate-pulse  w-[10vw] md:w-[2vw] bottom-0 right-0' alt="" />
-          <BoxReveal boxColor="#854CFE" duration={0.8}>
+          <ScrollAnimation>
             <h2 className='md:text-[1.3vw] w-[100%]  m-auto text-[5vw] font-[300] text-white hfont mb-[2vh] md:mb-0'>WELCOME TO PLEFIGOS,</h2>
-          </BoxReveal>
-          <BoxReveal boxColor="#854CFE" duration={0.8}>
+
             <h1 className='md:text-[4vw]  mb-[2vh] md:mb-0 px-[7vw] text-[10vw] font-bold text-white hfont'>We Develop Websites & Apps</h1>
-          </BoxReveal>
-          <BoxReveal boxColor="#854CFE" duration={0.8}>
             <p className='text-white text-[6vw] px-[7vw] font-[300] md:text-[1.2vw] pfont mb-[3vh] md:mb-[5vh] pt-[1vh]'>We make the best strategies for you, Enhancing your success. We complete each project with extra care as per the customer needs.!</p>
-          </BoxReveal>
-          <BoxReveal boxColor="#854CFE" duration={0.8}>
             <button className='bg-[#854CFE] delay-100 hover:bg-blue-100 hover:text-black px-[15vw] md:px-[5vw] py-[1.7vh] rounded-[30px] text-white pfont font-semibold'>Request Demo</button>
-          </BoxReveal>
+          </ScrollAnimation>
         </div>
       </section>
-      <section className='relative z-20 h-[20vh] text-black bg-slate-50'>
+      <section className='relative z-20 md:h-[20vh] text-black bg-slate-50'>
         <section className='md:h-[30vh]  bg-white rounded-lg relative md:bottom-[15vh] md:shadow-xl shadow-none md:mt-0 md:flex items-center justify-between w-[90%] m-auto flex-wrap '>
 
-          <article className='md:w-[33%] h-[20vh]  items-center flex md:justify-center justify-start'>
+          <article className='md:w-[33%] h-[20vh]  items-center flex md:justify-center justify-center'>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-16 mr-[1.5vw] text-[#384ea7]">
               <path strokeLinecap="round" strokeLinejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z" />
             </svg>
-            <div className=''>
+            <div className='ml-[4vw] md:ml-0'>
               <h1 className='text-[6vw] md:text-[1.2vw] pfont'>Happy Clients</h1>
               <h1 className='text-[7vw] md:text-[2vw] font-semibold hfont'>16</h1>
             </div>
           </article>
-          <article className='md:w-[33%] h-[20vh] mt-[2vh] md:mt-0  items-center flex md:justify-center justify-start'>
+          <article className='md:w-[33%] h-[20vh] mt-[2vh] md:mt-0  items-center flex md:justify-center justify-center'>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-16 mr-[1.5vw] text-[#384ea7] ">
               <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 12.75V12A2.25 2.25 0 0 1 4.5 9.75h15A2.25 2.25 0 0 1 21.75 12v.75m-8.69-6.44-2.12-2.12a1.5 1.5 0 0 0-1.061-.44H4.5A2.25 2.25 0 0 0 2.25 6v12a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18V9a2.25 2.25 0 0 0-2.25-2.25h-5.379a1.5 1.5 0 0 1-1.06-.44Z" />
             </svg>
-            <div className=''>
+            <div className='ml-[4vw] md:ml-0'>
               <h1 className='text-[6vw] md:text-[1.2vw] pfont'>Project Done</h1>
               <h1 className='text-[7vw] md:text-[2vw] font-semibold hfont'>30</h1>
             </div>
           </article>
-          <article className='md:w-[33%] h-[20vh] mt-[2vh] md:mt-0  items-center flex md:justify-center justify-start'>
+          <article className='md:w-[33%] h-[20vh] mt-[2vh] md:mt-0  items-center flex md:justify-center justify-center'>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-16 mr-[1.5vw] text-[#384ea7] ">
               <path strokeLinecap="round" strokeLinejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
             </svg>
 
-            <div className=''>
-              <h1 className='text-[6vw] md:text-[1.2vw] pfont'>Rating</h1>
+            <div className='ml-[4vw] md:ml-0'>
+              <h1 className='text-[6vw] md:text-[1.2vw] pfont'>Our Rating</h1>
               <h1 className='text-[7vw] md:text-[2vw] font-semibold hfont'>5/5</h1>
             </div>
           </article>
@@ -112,51 +106,51 @@ const Home = () => {
       </section>
       <section>
       </section>
-      <section className="relative z-10 bg-slate-50 py-[10vh]">
+      <section className="relative z-10 bg-slate-50 py-[5vh] md:py-[10vh]">
         <ScrollAnimation>
-          <h1 className='pl-[5vw] md:text-[4vw]  font-bold text-[#384ea7] hfont text-[8vw] md:pt-[0vh]'>OUR SERVICES</h1>
-          <h3 className='pl-[5vw] md:text-[1.3vw] font-normal md:font-[400] text-slate-700 hfont  text-[6vw] px-[6vw]  md:pb-[5vh]'>Custom IT Solutions for Your Successful Business</h3>
+          <h1 className='pl-[5vw] md:text-[4vw] pt-[2vh] md:py-0 font-bold text-[#384ea7] hfont text-[10vw] md:pt-[0vh]'>OUR SERVICES</h1>
+          <h3 className='pl-[5vw] md:text-[1.3vw] font-normal md:font-[400] text-slate-700 hfont text-[5vw] px-[6vw]  pb-[5vh]'>Custom IT Solutions for Your Successful Business</h3>
         </ScrollAnimation>
         <article className="md:flex justify-between px-[5vw] w-[100%]  ">
-          <div className="card  card-compact bg-white md:w-[30%] shadow-xl">
+          <div className="card rounded-lg card-compact bg-white md:w-[30%] mb-[3vh] md:mb-0 shadow-xl">
             <figure className="">
               <Image
                 src={facebook}
                 alt="Shoes"
-                className="h-[30vh] object-cover" />
+                className="h-[30vh] rounded-t-lg object-cover" />
             </figure>
-            <div className="card-body">
-              <h2 className="card-title text-black">Facebook Ads</h2>
-              <p className="text-slate-700 md:text-[1vw]">Facebook ads help businesses reach a wider audience and increase...</p>
+            <div className="card-body md:p-[0.7vw] p-[4vw]">
+              <h2 className="card-title text-black text-[5.5vw] md:text-[1.2vw]">Facebook Ads</h2>
+              <p className="text-slate-700 text-[4.5vw] md:text-[1vw]">Facebook ads help businesses reach a wider audience and increase...</p>
               <div className="card-actions justify-end">
-                <button className="btn text-white btn-primary">Know More</button>
+                {/* <button className=" text-blue-600 rounded-lg py-[1vh] border px-[1vw] border-blue-600">Know more</button> */}
               </div>
             </div>
           </div>
-          <div className="card  card-compact bg-white md:w-[30%] shadow-xl">
+          <div className="card rounded-lg card-compact mb-[3vh] md:mb-0 bg-white md:w-[30%] shadow-xl">
             <figure className="">
               <Image
                 src={google}
                 alt="Shoes"
-                className="h-[30vh] object-cover" />
+                className="h-[30vh] object-cover rounded-t-lg" />
             </figure>
-            <div className="card-body">
-              <h2 className="card-title text-black">Google Ads</h2>
+            <div className="card-body md:p-[0.7vw] p-[4vw]">
+              <h2 className="card-title text-black text-[5.5vw] md:text-[1.2vw]">Google Ads</h2>
               <p className="text-slate-700 md:text-[1vw]">Google Ads helps businesses reach target audience, increase...</p>
               <div className="card-actions justify-end">
                 <button className="btn text-white btn-primary">Know More</button>
               </div>
             </div>
           </div>
-          <div className="card  card-compact bg-white md:w-[30%] shadow-xl">
+          <div className="card rounded-lg card-compact bg-white md:w-[30%] shadow-xl">
             <figure className="">
               <Image
                 src={graphic}
                 alt="Shoes"
-                className="h-[30vh] object-cover" />
+                className="h-[30vh] rounded-t-lg object-cover" />
             </figure>
-            <div className="card-body">
-              <h2 className="card-title text-black">Graphic Designing</h2>
+            <div className="card-body md:p-[0.7vw] p-[4vw]">
+              <h2 className="card-title text-black text-[5.5vw] md:text-[1.2vw]">Graphic Designing</h2>
               <p className="text-slate-700 md:text-[1vw]">It plays a crucial role in creating brand identity, enhancing...</p>
               <div className="card-actions justify-end">
                 <button className="btn text-white btn-primary">Know More</button>
@@ -164,46 +158,46 @@ const Home = () => {
             </div>
           </div>
         </article>
-        <article className="md:flex justify-between px-[5vw] mt-[5vh] w-[100%]  ">
-          <div className="card card-compact bg-white md:w-[30%] shadow-xl">
+        <article className="md:flex justify-between px-[5vw] mt-[3vh] md:mt-[5vh] w-[100%]  ">
+          <div className="card card-compact rounded-lg bg-white md:w-[30%] shadow-xl">
             <figure className="">
               <Image
                 src={web}
                 alt="Shoes"
-                className="h-[30vh] object-cover" />
+                className="h-[30vh] object-cover rounded-t-lg" />
             </figure>
-            <div className="card-body">
-              <h2 className="card-title text-black">Web Development</h2>
+            <div className="card-body rounded-lg md:p-[0.7vw] p-[4vw]">
+              <h2 className="card-title text-black text-[5.5vw] md:text-[1.2vw]">Web Development</h2>
               <p className="text-slate-700 md:text-[1vw]">We design and develop the best user-friendly website and most...</p>
               <div className="card-actions justify-end">
                 <button className="btn text-white btn-primary">Know More</button>
               </div>
             </div>
           </div>
-          <div className="card  card-compact bg-white md:w-[30%] shadow-xl">
+          <div className="card  card-compact rounded-lg mt-[3vh] md:mt-0  bg-white md:w-[30%] shadow-xl">
             <figure className="">
               <Image
                 src={business}
                 alt="Shoes"
-                className="h-[30vh] object-cover" />
+                className="h-[30vh] rounded-t-lg object-cover" />
             </figure>
-            <div className="card-body">
-              <h2 className="card-title text-black">Google My Business</h2>
+            <div className="card-body md:p-[0.7vw] p-[4vw]">
+              <h2 className="card-title text-black text-[5.5vw] md:text-[1.2vw]">Google My Business</h2>
               <p className="text-slate-700 md:text-[1vw]">We design and develop the best user-friendly website and most...</p>
               <div className="card-actions justify-end">
                 <button className="btn text-white btn-primary">Know More</button>
               </div>
             </div>
           </div>
-          <div className="card  card-compact bg-white md:w-[30%] shadow-xl">
+          <div className="card  card-compact bg-white rounded-lg md:w-[30%] shadow-xl">
             <figure className="">
               <Image
                 src={wordpress}
                 alt="Shoes"
-                className="h-[30vh] object-cover" />
+                className="h-[30vh] rounded-t-lg mt-[3vh] md:mt-0 object-cover" />
             </figure>
-            <div className="card-body">
-              <h2 className="card-title text-black">WordPress</h2>
+            <div className="card-body md:p-[0.7vw] p-[4vw]">
+              <h2 className="card-title text-black text-[5.5vw] md:text-[1.2vw]">WordPress</h2>
               <p className="text-slate-700 md:text-[1vw]">To create and manage websites, making it easy for individuals...</p>
               <div className="card-actions justify-end">
                 <button className="btn text-white btn-primary">Know More</button>
@@ -213,13 +207,13 @@ const Home = () => {
         </article>
       </section>
 
-      <div className='pt-[10vh] pb-[10vh] bg-slate-50 relative z-10'>
+      <div className='md:pt-[10vh] pb-[10vh] bg-slate-50 relative z-10'>
         <ScrollAnimation>
-          <h1 className='pl-[5vw] md:text-[4.5vw]  font-bold text-[#384ea7] hfont text-[8vw] pt-[7vh] md:pt-0'>PRICING PLAN</h1>
-          <h3 className='pl-[5vw] md:text-[1.3vw] font-[300] md:font-[400] text-slate-700 hfont  text-[6vw] px-[6vw]  md:pb-[5vh]'>Custom IT Solutions for Your Successful Business</h3>
+          <h1 className='pl-[5vw] md:text-[4vw] pt-[2vh] md:py-0 font-bold text-[#384ea7] hfont text-[10vw] md:pt-[0vh]'>PRICING PLAN</h1>
+          <h3 className='pl-[5vw] md:text-[1.3vw] font-normal md:font-[400] text-slate-700 hfont text-[5vw] px-[6vw]  pb-[5vh]'>Custom IT Solutions for Your Successful Business</h3>
         </ScrollAnimation>
         <section className='md:flex justify-center items-center mx-[6vw]'>
-          <div className='shadow-md relative md:w-[30%] md:left-1 bg-white mt-[5vh] md:mt-0 md:top-[5vh] rounded-[20px]'>
+          <div className='shadow-md relative md:w-[30%] md:left-1 bg-white mt-[0vh] md:mt-0 md:top-[5vh] rounded-[20px]'>
             <figure className={`py-[7vh] flex flex-col items-center font-semibold ${s.imgpricing} text-white`}>
               <h1 className="md:text-[1.9vw] text-[8vw] hfont font-bold">Digital Marketing</h1>
               <p className="md:text-[1vw] pfont text-[5vw] font-normal">"DYNAMIC STRATEGIES"</p>
@@ -276,14 +270,14 @@ const Home = () => {
 
         </section>
       </div>
-      <section className="bg-slate-50 relative z-10 px-[5vw] flex justify-between">
-        <div className="w-[50%]">
-          <h1 className="pl-[5vw] md:text-[4.5vw]  font-bold text-[#384ea7] hfont text-[8vw] pt-[7vh] md:pt-0">TECHNOLOGY</h1>
-          <h3 className='pl-[5vw] md:text-[1.3vw] font-normal md:font-[400] text-slate-700 hfont  text-[6vw] px-[6vw]  md:pb-[5vh]'>See What Technology We Use</h3>
+      <section className="bg-slate-50 relative z-10 px-[5vw] justify-between">
+        <div className="md:w-[50%]">
+          <h1 className="pl-[5vw] md:text-[4vw] pt-[0vh] md:py-0 font-bold text-[#384ea7] hfont text-[10vw] md:pt-[0vh]">TECHNOLOGY</h1>
+          <h3 className='pl-[5vw] md:text-[1.3vw] font-normal md:font-[400] text-slate-700 hfont text-[5vw] md:px-[6vw]  pb-[5vh]'>See What Technology We Use</h3>
         </div>
-      <div className="relative z-10 flex h-full w-full max-w-[50%] items-center justify-center overflow-hidden rounded-lg border bg-background px-20 pb-20 pt-8 ">
-        <IconCloud iconSlugs={slugs} />
-      </div>
+        <div className="relative z-10 flex h-full w-[100%] md:max-w-[100%] items-center justify-center overflow-hidden rounded-lg  bg-background md:px-20 md:pb-20 md:pt-8 ">
+          <IconCloud iconSlugs={slugs} />
+        </div>
       </section>
       <section className='bg-slate-50 relative z-10 text-[#292929] pt-[0vh] md:py-2'>
         <article className={`${s.whychoosebg} md:text-white md:py-[2vh] md:h-[40vh] flex flex-col md:items-center md:justify-center`}>
@@ -313,7 +307,7 @@ const Home = () => {
           </div>
         </article>
       </section>
-      
+
     </>
   )
 }
