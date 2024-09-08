@@ -32,7 +32,7 @@ const Navbar = () => {
                     </button>
                 </div>
 
-                <ul className={`flex pfont text-slate-700  z-0 text-[6vw] h-[100vh] bg-[#061551] px-[4vw] pt-[20vh] pb-[30vh] md:pt-0 md:text-[0.9vw] items-center font-semibold md:pb-0 justify-between lg:static absolute lg:flex-row flex-col top-[0vh] left-0 lg:w-[40%] w-full lg:bg-transparent transition-transform transform ${isOpen ? 'translate-x-0' : '-translate-x-full'} lg:translate-x-0`}>
+                <ul className={`flex pfont text-white md:text-slate-700  z-0 text-[6vw] h-[100vh] bg-[#061551] px-[4vw] pt-[20vh] pb-[30vh] md:pt-0 md:text-[0.9vw] items-center font-semibold md:pb-0 justify-between lg:static absolute lg:flex-row flex-col top-[0vh] left-0 lg:w-[40%] w-full lg:bg-transparent transition-transform transform ${isOpen ? 'translate-x-0' : '-translate-x-full'} lg:translate-x-0`}>
                     <li onClick={closeMenu}>
                         <Link href='/' className={isActive('/') ? 'text-[#854CFE]' : ''}>HOME</Link>
                     </li>

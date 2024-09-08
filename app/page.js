@@ -11,8 +11,8 @@ import wordpress from '/assects/images/wordpress.jpg'
 import web from '/assects/images/web.webp'
 import Image from 'next/image'
 import dynamic from 'next/dynamic';
-const ScrollAnimation = dynamic(() => import('./components/ScrollAnimation'), { ssr: false });
 import IconCloud from "@/components/magicui/icon-cloud";
+import ClientWrapper from './components/ClientWrapper'
 
 const slugs = [
   "typescript",
@@ -49,31 +49,30 @@ const slugs = [
 const Home = () => {
   return (
     <>
-      <section className='h-[92vh] z-10 relative flex justify-center items-center'>
+    <ClientWrapper>
+      <section className='h-[110vh] z-10 relative flex justify-center items-center'>
         <video
           src="/assects/videos/teamvideo.mp4"
           autoPlay
           muted
           loop
-          className='h-[92vh] w-full object-cover fixed z-0'>
+          className='h-[110vh] w-full object-cover fixed z-0'>
         </video>
         <div className='absolute inset-0 bg-gradient-to-b from-[#061551a0] to-[#061551a0] z-[1]'></div>
         <div className='relative z-10 text-center py-[10vh] flex items-center justify-center flex-col'>
           <Image src={design} className='absolute animate-spin w-[10vw] md:w-[2vw] top-0 right-[14vw]' alt="" />
           <Image src={design1} className='absolute  w-[10vw] md:w-[2vw] animate-bounce bottom-[13vh] left-0' alt="" />
           <Image src={design2} className='absolute animate-pulse  w-[10vw] md:w-[2vw] bottom-0 right-0' alt="" />
-          <ScrollAnimation>
+          <span data-aos="fade-up">
             <h2 className='md:text-[1.3vw] w-[100%]  m-auto text-[5vw] font-[300] text-white hfont mb-[2vh] md:mb-0'>WELCOME TO PLEFIGOS,</h2>
-
             <h1 className='md:text-[4vw]  mb-[2vh] md:mb-0 px-[7vw] text-[10vw] font-bold text-white hfont'>We Develop Websites & Apps</h1>
             <p className='text-white text-[6vw] px-[7vw] font-[300] md:text-[1.2vw] pfont mb-[3vh] md:mb-[5vh] pt-[1vh]'>We make the best strategies for you, Enhancing your success. We complete each project with extra care as per the customer needs.!</p>
-            <button className='bg-[#854CFE] delay-100 hover:bg-blue-100 hover:text-black px-[15vw] md:px-[5vw] py-[1.7vh] rounded-[30px] text-white pfont font-semibold'>Request Demo</button>
-          </ScrollAnimation>
+            <button className='bg-[#854CFE] mb-[20vh] delay-100 hover:bg-blue-100 hover:text-black px-[15vw] md:px-[5vw] py-[1.7vh] rounded-[30px] text-white pfont font-semibold'>Request Demo</button>
+          </span>
         </div>
       </section>
       <section className='relative z-20 md:h-[20vh] text-black bg-slate-50'>
-        <section className='md:h-[30vh]  bg-white rounded-lg relative md:bottom-[15vh] md:shadow-xl shadow-none md:mt-0 md:flex items-center justify-between w-[90%] m-auto flex-wrap '>
-
+        <section data-aos="fade-right" className='md:h-[30vh]  bg-white rounded-lg relative md:bottom-[35vh] md:shadow-xl shadow-none md:mt-0 md:flex items-center justify-between w-[90%] m-auto flex-wrap '>
           <article className='md:w-[33%] h-[20vh]  items-center flex md:justify-center justify-center'>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-16 mr-[1.5vw] text-[#384ea7]">
               <path strokeLinecap="round" strokeLinejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z" />
@@ -89,7 +88,7 @@ const Home = () => {
             </svg>
             <div className='ml-[4vw] md:ml-0'>
               <h1 className='text-[6vw] md:text-[1.2vw] pfont'>Project Done</h1>
-              <h1 className='text-[7vw] md:text-[2vw] font-semibold hfont'>30</h1>
+              <h1  className='text-[7vw] md:text-[2vw] font-semibold hfont'>30</h1>
             </div>
           </article>
           <article className='md:w-[33%] h-[20vh] mt-[2vh] md:mt-0  items-center flex md:justify-center justify-center'>
@@ -99,20 +98,20 @@ const Home = () => {
 
             <div className='ml-[4vw] md:ml-0'>
               <h1 className='text-[6vw] md:text-[1.2vw] pfont'>Our Rating</h1>
-              <h1 className='text-[7vw] md:text-[2vw] font-semibold hfont'>5/5</h1>
+              <h1  className='text-[7vw] md:text-[2vw] font-semibold hfont'>5/5</h1>
             </div>
           </article>
         </section>
       </section>
       <section>
       </section>
-      <section className="relative z-10 bg-slate-50 py-[5vh] md:py-[10vh]">
-        <ScrollAnimation>
-          <h1 className='pl-[5vw] md:text-[4vw] pt-[2vh] md:py-0 font-bold text-[#384ea7] hfont text-[10vw] md:pt-[0vh]'>OUR SERVICES</h1>
-          <h3 className='pl-[5vw] md:text-[1.3vw] font-normal md:font-[400] text-slate-700 hfont text-[5vw] px-[6vw]  pb-[5vh]'>Custom IT Solutions for Your Successful Business</h3>
-        </ScrollAnimation>
+      <section  className="relative z-10 bg-slate-50 py-[5vh] md:pb-[10vh] md:pt-0">
+          <h1 data-aos="fade-right" className='pl-[5vw] md:text-[4vw] pt-[2vh] md:py-0 font-bold text-[#384ea7] hfont text-[10vw] md:pt-[0vh]'>OUR SERVICES</h1>
+          <h3 data-aos="fade-right" className='pl-[5vw] md:text-[1.3vw] font-normal md:font-[400] text-slate-700 hfont text-[5vw] px-[6vw]  pb-[5vh]'>Custom IT Solutions for Your Successful Business</h3>
+        
         <article className="md:flex justify-between px-[5vw] w-[100%]  ">
-          <div className="card rounded-lg card-compact bg-white md:w-[30%] mb-[3vh] md:mb-0 shadow-xl">
+          <div data-aos="fade-up" className="card rounded-lg card-compact bg-white md:w-[30%] mb-[3vh] md:mb-0 shadow-xl">
+        
             <figure className="">
               <Image
                 src={facebook}
@@ -127,7 +126,8 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className="card rounded-lg card-compact mb-[3vh] md:mb-0 bg-white md:w-[30%] shadow-xl">
+          <div data-aos="fade-up" className="card rounded-lg card-compact mb-[3vh] md:mb-0 bg-white md:w-[30%] shadow-xl">
+          
             <figure className="">
               <Image
                 src={google}
@@ -142,7 +142,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className="card rounded-lg card-compact bg-white md:w-[30%] shadow-xl">
+          <div data-aos="fade-up" className="card rounded-lg card-compact bg-white md:w-[30%] shadow-xl">
             <figure className="">
               <Image
                 src={graphic}
@@ -158,8 +158,8 @@ const Home = () => {
             </div>
           </div>
         </article>
-        <article className="md:flex justify-between px-[5vw] mt-[3vh] md:mt-[5vh] w-[100%]  ">
-          <div className="card card-compact rounded-lg bg-white md:w-[30%] shadow-xl">
+        <article  className="md:flex justify-between px-[5vw] mt-[3vh] md:mt-[5vh] w-[100%]  ">
+          <div data-aos="fade-up" className="card card-compact rounded-lg bg-white md:w-[30%] shadow-xl">
             <figure className="">
               <Image
                 src={web}
@@ -174,7 +174,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className="card  card-compact rounded-lg mt-[3vh] md:mt-0  bg-white md:w-[30%] shadow-xl">
+          <div data-aos="fade-up" className="card  card-compact rounded-lg mt-[3vh] md:mt-0  bg-white md:w-[30%] shadow-xl">
             <figure className="">
               <Image
                 src={business}
@@ -189,7 +189,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className="card  card-compact bg-white rounded-lg md:w-[30%] shadow-xl">
+          <div data-aos="fade-up" className="card  card-compact bg-white rounded-lg md:w-[30%] shadow-xl">
             <figure className="">
               <Image
                 src={wordpress}
@@ -208,12 +208,11 @@ const Home = () => {
       </section>
 
       <div className='md:pt-[10vh] pb-[10vh] bg-slate-50 relative z-10'>
-        <ScrollAnimation>
-          <h1 className='pl-[5vw] md:text-[4vw] pt-[2vh] md:py-0 font-bold text-[#384ea7] hfont text-[10vw] md:pt-[0vh]'>PRICING PLAN</h1>
-          <h3 className='pl-[5vw] md:text-[1.3vw] font-normal md:font-[400] text-slate-700 hfont text-[5vw] px-[6vw]  pb-[5vh]'>Custom IT Solutions for Your Successful Business</h3>
-        </ScrollAnimation>
+          <h1 data-aos="fade-right" className='pl-[5vw] md:text-[4vw] pt-[2vh] md:py-0 font-bold text-[#384ea7] hfont text-[10vw] md:pt-[0vh]'>PRICING PLAN</h1>
+          <h3 data-aos="fade-right" className='pl-[5vw] md:text-[1.3vw] font-normal md:font-[400] text-slate-700 hfont text-[5vw] px-[6vw]  pb-[5vh]'>Custom IT Solutions for Your Successful Business</h3>
+       
         <section className='md:flex justify-center items-center mx-[6vw]'>
-          <div className='shadow-md relative md:w-[30%] md:left-1 bg-white mt-[0vh] md:mt-0 md:top-[5vh] rounded-[20px]'>
+          <div data-aos="fade-up" className='shadow-md relative md:w-[30%] md:left-1 bg-white mt-[0vh] md:mt-0 md:top-[5vh] rounded-[20px]'>
             <figure className={`py-[7vh] flex flex-col items-center font-semibold ${s.imgpricing} text-white`}>
               <h1 className="md:text-[1.9vw] text-[8vw] hfont font-bold">Digital Marketing</h1>
               <p className="md:text-[1vw] pfont text-[5vw] font-normal">"DYNAMIC STRATEGIES"</p>
@@ -231,7 +230,7 @@ const Home = () => {
               <button className='my-[7vh] pfont md:text-[1.3vw] bg-[#854CFE] md:bg-[#854CFE] hover:bg-purple-600 w-[100%] py-[1vh] rounded-lg text-white'>See more features...</button>
             </ul>
           </div>
-          <div className='shadow-xl md:w-[30%] relative z-10 mt-[5vh] bg-white md:mt-0 rounded-[20px]'>
+          <div data-aos="fade-up" className='shadow-xl md:w-[30%] relative z-10 mt-[5vh] bg-white md:mt-0 rounded-[20px]'>
             <figure className={`py-[7vh] flex flex-col items-center font-semibold ${s.imgpricing1} text-white`}>
               <h1 className="md:text-[1.9vw] text-[8vw] hfont font-bold">Website Development</h1>
               <p className="md:text-[1vw] pfont text-[5vw] font-normal">"WEB SOLUTIONS"</p>
@@ -249,7 +248,7 @@ const Home = () => {
               <button className='my-[7vh] pfont md:text-[1.3vw] bg-[#854CFE] hover:bg-[#854CFE] w-[100%] py-[1vh] rounded-lg text-white'>See more features...</button>
             </ul>
           </div>
-          <div className='shadow-md  md:w-[30%] right-1 bg-white z-0 relative mt-[5vh] md:mt-0 md:top-[5vh] rounded-[20px]'>
+          <div data-aos="fade-up" className='shadow-md  md:w-[30%] right-1 bg-white z-0 relative mt-[5vh] md:mt-0 md:top-[5vh] rounded-[20px]'>
             <figure className={`py-[7vh] flex flex-col items-center font-semibold ${s.imgpricing2} text-white`}>
               <h1 className="md:text-[1.9vw] text-[8vw] hfont font-bold">App Development</h1>
               <p className="md:text-[1vw] pfont text-[5vw] font-normal">"INNOVATIVE APP"</p>
@@ -270,12 +269,13 @@ const Home = () => {
 
         </section>
       </div>
-      <section className="bg-slate-50 relative z-10 px-[5vw] justify-between">
-        <div className="md:w-[50%]">
+      <section className="bg-slate-50 md:flex items-start relative z-10 justify-between">
+        <div data-aos="fade-up" className="md:pt-[5vh] md:w-[50%]">
           <h1 className="pl-[5vw] md:text-[4vw] pt-[0vh] md:py-0 font-bold text-[#384ea7] hfont text-[10vw] md:pt-[0vh]">TECHNOLOGY</h1>
-          <h3 className='pl-[5vw] md:text-[1.3vw] font-normal md:font-[400] text-slate-700 hfont text-[5vw] md:px-[6vw]  pb-[5vh]'>See What Technology We Use</h3>
+          <h3 className='pl-[5vw] md:text-[1.3vw] font-normal md:font-[400] text-slate-700 hfont text-[5vw] md:px-[5vw]  pb-[5vh]'>See What Technology We Use</h3>
+          <p className="px-[5vw] text-gray-600 md:text-[1.3vw]">We leverage cutting-edge technologies to deliver exceptional solutions that meet your needs and exceed your expectations. Our technology stack is carefully chosen to ensure the highest performance, scalability, and reliability for our applications.</p>
         </div>
-        <div className="relative z-10 flex h-full w-[100%] md:max-w-[100%] items-center justify-center overflow-hidden rounded-lg  bg-background md:px-20 md:pb-20 md:pt-8 ">
+        <div data-aos="fade-in" className="relative  md:w-[50%] z-10 flex h-full w-[100%] md:max-w-[100%] items-center justify-center overflow-hidden rounded-lg  bg-background  ">
           <IconCloud iconSlugs={slugs} />
         </div>
       </section>
@@ -307,7 +307,7 @@ const Home = () => {
           </div>
         </article>
       </section>
-
+      </ClientWrapper>
     </>
   )
 }
