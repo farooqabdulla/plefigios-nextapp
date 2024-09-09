@@ -47,12 +47,13 @@ const slugs = [
   "google",
   "facebook",
   "wordpress",
+  "canva"
 ];
 const Home = () => {
   return (
     <>
       <ClientWrapper>
-        <section className='h-[110vh] z-10 relative flex justify-center items-center'>
+        <section className='h-[92vh] md:h-[110vh] z-10 relative flex justify-center items-center'>
           <video
             src="/assects/videos/team.webm"
             autoPlay
@@ -63,8 +64,8 @@ const Home = () => {
           <div className='absolute inset-0 bg-gradient-to-b from-[#061551a0] to-[#061551a0] z-[1]'></div>
           <div className='relative z-10 text-center py-[10vh] flex items-center justify-center flex-col'>
             <Image src={design} className='absolute animate-spin w-[10vw] md:w-[2vw] top-0 right-[14vw]' alt="" />
-            <Image src={design1} className='absolute  w-[10vw] md:w-[2vw] animate-bounce bottom-[13vh] left-0' alt="" />
-            <Image src={design2} className='absolute animate-pulse  w-[10vw] md:w-[2vw] bottom-0 right-0' alt="" />
+            <Image src={design1} className='absolute  w-[10vw] md:w-[2vw] animate-bounce bottom-[16.5vh] left-0' alt="" />
+            <Image src={design2} className='absolute animate-pulse  w-[10vw] md:w-[2vw] bottom-[26vh] right-0' alt="" />
             <span data-aos="fade-up">
               <h2 className='md:text-[1.3vw] w-[100%]  m-auto text-[5vw] font-[300] text-white hfont mb-[2vh] md:mb-0'>WELCOME TO PLEFIGOS,</h2>
               <h1 className='md:text-[4vw] font-thin mb-[2vh] md:mb-0 px-[7vw] text-[10vw]  text-white hfont'>We Develop Websites & Apps</h1>
